@@ -6,7 +6,7 @@ const App = () => {
 
   return (
     <div style={{margin : "100px"}}>
-      <button onClick={()=>setCount(count - 1)}>Decrement</button>
+      <button style={{background : "purple"}} onClick={()=>setCount(count - 1)}>Decrement</button>
       <h1>{count}</h1>
       <button onClick={()=>setCount(count + 1)}>Increment</button>
     </div>
