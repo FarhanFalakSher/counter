@@ -2,33 +2,60 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="p-4 md:p-10 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <section id="about" className="bg-black text-white py-16 px-6 md:px-12">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-10 text-purple-400">
+          About Me
+        </h2>
 
-      <p className="text-lg text-gray-300 leading-relaxed mb-10 text-center">
-        I'm <strong>Farhan Falaksher</strong>, a frontend developer skilled in HTML5, CSS3, JavaScript,
-        and React.js. I build responsive and beautiful user interfaces with modern technologies.
-      </p>
+        {/* Bio */}
+        <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-center max-w-3xl mx-auto mb-12">
+          Hello! I'm <span className="font-semibold text-purple-400">Farhan Falaksher</span>, a passionate <strong>Frontend Developer</strong> who loves turning creative designs into fully functional web experiences.
+          I specialize in building responsive, fast-loading, and pixel-perfect websites using modern technologies like <strong>React.js</strong>, <strong>Tailwind CSS</strong>, and <strong>JavaScript</strong>.
+          With a strong foundation in HTML and CSS, I ensure clean, reusable, and scalable code.
+        </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 items-center justify-items-center">
-        <div className="text-center">
-          <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwXMKsG4_wlmlsOLkL7juxmJiw86IF8u7pw&s"} alt="HTML5" className="w-20 h-20 mx-auto mb-2" />
-          <p>HTML5</p>
-        </div>
+        {/* Skills Section */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-center justify-items-center">
+          {/* HTML */}
+          <div className="text-center hover:scale-110 transition duration-300">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwXMKsG4_wlmlsOLkL7juxmJiw86IF8u7pw&s"
+              alt="HTML5"
+              className="w-24 h-24 object-contain mx-auto mb-3"
+            />
+            <p className="text-lg font-medium">HTML5</p>
+          </div>
 
-        <div className="text-center">
-          <img src={"https://images.seeklogo.com/logo-png/29/2/css-3-logo-png_seeklogo-297888.png"} alt="CSS3" className="w-20 h-20 mx-auto mb-2" />
-          <p>CSS3</p>
-        </div>
+          {/* CSS */}
+          <div className="text-center hover:scale-110 transition duration-300">
+            <img
+              src="https://images.seeklogo.com/logo-png/29/2/css-3-logo-png_seeklogo-297888.png"
+              alt="CSS3"
+              className="w-24 h-24 object-contain mx-auto mb-3"
+            />
+            <p className="text-lg font-medium">CSS3</p>
+          </div>
 
-        <div className="text-center">
-          <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpoCEoIxcRxohRRmSa6i9b5EnZG2wwaPNNSuR9NjdZFAQ5ZwelfMxTAv0KeSZH0QXCtYc&usqp=CAU"} alt="JavaScript" className="w-20 h-20 mx-auto mb-2" />
-          <p>JavaScript</p>
-        </div>
+          {/* JavaScript */}
+          <div className="text-center hover:scale-110 transition duration-300">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpoCEoIxcRxohRRmSa6i9b5EnZG2wwaPNNSuR9NjdZFAQ5ZwelfMxTAv0KeSZH0QXCtYc&usqp=CAU"
+              alt="JavaScript"
+              className="w-24 h-24 object-contain mx-auto mb-3"
+            />
+            <p className="text-lg font-medium">JavaScript</p>
+          </div>
 
-        <div className="text-center">
-          <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS44cBJfuW1hkbQ65rsWadxzyUTifhzD8pXoQ&s"} alt="React" className="w-20 h-20 mx-auto mb-2" />
-          <p>React.js</p>
+          {/* React */}
+          <div className="text-center hover:scale-110 transition duration-300">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS44cBJfuW1hkbQ65rsWadxzyUTifhzD8pXoQ&s"
+              alt="React"
+              className="w-24 h-24 object-contain mx-auto mb-3"
+            />
+            <p className="text-lg font-medium">React.js</p>
+          </div>
         </div>
       </div>
     </section>
@@ -36,5 +63,3 @@ const About = () => {
 };
 
 export default About;
-
-
