@@ -7,13 +7,13 @@ const Home = () => {
     <section className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 gap-10">
       
       {/* Text Content */}
-      
+
       <div className="text-center md:text-left max-w-xl">
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
           Hi, I'm <span className="text-purple-400">Farhan Falaksher</span>
         </h1>
         <p className="text-gray-300 text-lg mb-6">
-          A passionate Frontend Developer crafting elegant and responsive websites using React, Tailwind CSS, and modern web technologies.
+          A passionate Frontend Developer crafting elegant and responsive websites using React.Js, Tailwind CSS, and modern web technologies.
         </p>
 
    <Link
