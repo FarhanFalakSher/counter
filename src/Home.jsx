@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import farhanImage from "./assets/farhan.webp"; // Ensure this path is correct
-
 const Home = () => {
   return (
     <section className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 py-12 gap-10">
