@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -7,6 +7,16 @@ const Sidebar = () => {
   const location = useLocation();
 
   const closeMenu = () => setIsOpen(false);
+
+  // Optional: lock scroll when sidebar is open on mobile
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => (document.body.style.overflow = "auto");
+  }, [isOpen]);
 
   const navItems = [
     { label: "Home", to: "/" },
@@ -34,10 +44,10 @@ const Sidebar = () => {
         />
       )}
 
-      {/* Sidebar */}
+      {/* Sidebar (Mobile & Desktop) */}
       <aside
         className={`fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-black via-gray-900 to-black text-white p-8 pt-14 z-40 
-        transition-transform duration-300 ease-in-out shadow-lg 
+        transition-transform duration-300 ease-in-out shadow-lg
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
         md:translate-x-0 md:static md:block overflow-y-auto`}
       >
