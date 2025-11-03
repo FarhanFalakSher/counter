@@ -204,7 +204,6 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="border-t border-zinc-800 pt-5 pb-8 px-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
           <span>© {new Date().getFullYear()} Farhan Falaksher. All rights reserved.</span>
           <span className="mt-2 md:mt-0">
