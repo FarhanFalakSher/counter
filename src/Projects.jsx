@@ -12,13 +12,11 @@ const ProjectImage = ({ title, image, domain, className }) => {
   const [src, setSrc] = useState(image);
 
   const onError = useCallback(() => {
-    // 1) readable placeholder
     const placeholder = "https://placehold.co/1200x800/111/AAA?text=Add+Screenshot";
     if (src !== placeholder) {
       setSrc(placeholder);
       return;
     }
-    // 2) last resort: favicon
     const favicon = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(
       domain
     )}&sz=256`;
@@ -40,7 +38,6 @@ const ProjectImage = ({ title, image, domain, className }) => {
 const Projects = () => {
   const [search, setSearch] = useState("");
 
-  // 👉 your projects (added 2 new ones at the end)
   const portfolios = useMemo(
     () => [
       {
@@ -79,27 +76,43 @@ const Projects = () => {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwSCli3QI3e--UsCfZ66YF4Adty2TOa8GJhg&s",
         domain: "crm-one-blush-63.vercel.app",
       },
-
-      // ✅ NEW: text-livid-seven.vercel.app
       {
         id: 5,
         title: "Text App",
         desc: "Utilities for formatting and transforming text.",
         url: "https://text-livid-seven.vercel.app",
         image:
-          "https://pbs.twimg.com/profile_images/470632818653921280/l5V_RKUu_400x400.png", // change to your real screenshot anytime
+          "https://pbs.twimg.com/profile_images/470632818653921280/l5V_RKUu_400x400.png",
         domain: "text-livid-seven.vercel.app",
       },
-
-      // ✅ NEW: dashboard-one-navy-25.vercel.app
       {
         id: 6,
         title: "Dashboard (Navy)",
         desc: "Clean analytics dashboard with charts and widgets.",
         url: "https://dashboard-one-navy-25.vercel.app",
         image:
-          "https://www.geckoboard.com/uploads/customer-service-dashboard-example-geckoboard.png", // change to your real screenshot anytime
+          "https://www.geckoboard.com/uploads/customer-service-dashboard-example-geckoboard.png",
         domain: "dashboard-one-navy-25.vercel.app",
+      },
+      // ✅ NEW PROJECT 1
+      {
+        id: 7,
+        title: "Media IC3E",
+        desc: "A media platform for creative engagement and exploration.",
+        url: "https://media-ic3e.vercel.app",
+        image:
+          "https://img.freepik.com/free-vector/infographic-dashboard-user-panel_52683-30026.jpg?semt=ais_hybrid&w=740&q=80",
+        domain: "media-ic3e.vercel.app",
+      },
+      // ✅ NEW PROJECT 2
+      {
+        id: 8,
+        title: "Book App",
+        desc: "A modern online book showcase and reading platform.",
+        url: "https://book-puce-nine.vercel.app",
+        image:
+          "https://mir-s3-cdn-cf.behance.net/project_modules/fs/00788076037647.5c5d93e8bc45a.jpg",
+        domain: "book-puce-nine.vercel.app",
       },
     ],
     []
